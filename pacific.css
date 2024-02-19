@@ -5,12 +5,17 @@
 
   --text-color-dt: #002171;
   --text-color-h2: #1976d2;
+  --text-color-h3: #000033;
   --text-color-gray-dark: #555;
   --text-color-header: #fff;
   --text-color-resort: #1976d2;
+
+  --font-primary: 'Arial', 'Helvetica', sans-serif;
+  --font-secondary: 'Georgia', 'Times New Roman', serif;
 }
 
 body {
+  font-family: var(--font-primary);
   background-color: var(--background-color-white);
   color: var(--text-color-gray-dark);
 }
@@ -18,24 +23,57 @@ body {
 header {
   background-color: var(--background-color-header);
   color: var(--text-color-header);
+  background-image: url('sunset.jpg');
+  background-repeat: no-repeat;
+  background-position: right;
+  line-height: 400%;
+  text-indent: 1em;
 }
 
 nav {
   background-color: var(--background-color-nav);
+  font-weight: bold;
+
+  a {
+    text-decoration: none;
+  }
 }
 
 h1 {
+  font-family: var(--font-secondary);
   margin-bottom: 0;
 }
 
 h2 {
+  font-family: var(--font-secondary);
   color: var(--text-color-h2);
+}
+
+h3 {
+  font-family: var(--font-secondary);
+  color: var(--text-color-h3);
+}
+
+ul {
+  list-style-image: url('marker.gif');
 }
 
 dt {
   color: var(--text-color-dt);
 }
 
+footer {
+  font-size: 75%;
+  font-style: italic;
+  text-align: center;
+  font-family: var(--font-secondary);
+}
+
 .resort {
   color: var(--text-color-resort);
+  font-weight: bold;
+}
+
+#contact {
+  font-size: 90%;
 }
