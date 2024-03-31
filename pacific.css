@@ -11,6 +11,9 @@
   --text-color-header: #fff;
   --text-color-resort: #1976d2;
 
+  --table-color: #3399cc;
+  --table-background-color: #f5fafc;
+
   --font-primary: 'Arial', 'Helvetica', sans-serif;
   --font-secondary: 'Georgia', 'Times New Roman', serif;
 }
@@ -155,6 +158,29 @@ footer {
   background-image: url('trail.jpg');
   background-size: cover;
   background-repeat: no-repeat;
+}
+
+table {
+  border: 2px solid var(--table-color);
+  border-collapse: collapse;
+}
+
+td,
+th {
+  padding: 0.5em;
+  border: 2px solid var(--table-color);
+}
+
+td {
+  text-align: center;
+}
+
+.text {
+  text-align: left;
+}
+
+tr:nth-of-type(odd) {
+  background-color: var(--table-background-color);
 }
 
 @media only screen and (min-width: 600px) {
