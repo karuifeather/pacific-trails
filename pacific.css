@@ -178,3 +178,53 @@ footer {
     flex-direction: row;
   }
 }
+
+@media only screen and (min-width: 1024px) {
+  #wrapper {
+    margin: auto;
+    width: 80%;
+    border: 1px solid darkblue;
+    box-shadow: 3px 3px darkblue;
+  }
+
+  nav {
+    text-align: left;
+    padding-left: 1em;
+  }
+
+  @supports (display: grid) {
+    nav ul {
+      display: flex;
+      flex-direction: column;
+      padding-top: 1em;
+    }
+
+    #wrapper {
+      display: grid;
+      grid-template-columns: 180px auto; /* Two columns: fixed nav, flexible content */
+      grid-template-rows: auto 1fr auto; /* Header, flexible main, footer */
+      grid-template-areas:
+        'header header'
+        'nav hero'
+        'nav main'
+        'footer footer';
+    }
+
+    header {
+      grid-area: header;
+    }
+    nav {
+      grid-area: nav;
+    }
+    main {
+      grid-area: main;
+    }
+    footer {
+      grid-area: footer;
+    }
+
+    .hero {
+      grid-area: hero;
+    }
+  }
+}
